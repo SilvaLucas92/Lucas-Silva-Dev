@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Intro from './components/Intro/Intro';
+import React, { useState } from 'react';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import AboutMe from './components/AboutMe/AboutMe';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects'
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import { Box } from '@chakra-ui/react';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [ showBtn, setShowBtn] = useState(false)
+  return(
+    <div>
+    
+      {!showBtn && <Intro showBtn={showBtn}  setShowBtn={setShowBtn}/>}
+      { showBtn && 
+      <>
+        <Header />
+        <Hero />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </>
+        }
     </div>
-  );
+  )
 }
 
 export default App;
