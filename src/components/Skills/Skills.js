@@ -18,7 +18,6 @@ const Skills = () => {
       >
 
         <Flex 
-          h='80vh'
           w={{base: '90%', md: '80%', xl:'70%'}}
           mx='auto'
           align='center'
