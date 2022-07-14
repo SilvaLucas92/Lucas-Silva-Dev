@@ -37,7 +37,6 @@ const Intro = ({ showBtn, setShowBtn }) => {
     transition={{delay:0.5, duration:3}}
     >
     <Flex
-        p={10}
         justify='space-between'
         w='100%'
         h='100%'

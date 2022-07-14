@@ -62,51 +62,51 @@ const Skills = () => {
               src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
               alt="carousel image"
               mx='auto'
-              boxSize='100px'
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
               borderRadius='350px'
               />
             </SwiperSlide>
             <SwiperSlide>      
               <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
+              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/html2.png'}
               alt="carousel image"
-              boxSize='100px'
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
-              alt="carousel image"
-              boxSize='100px'
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
               borderRadius='350px'
               mx='auto'
               />
             </SwiperSlide>
             <SwiperSlide>      
               <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
+              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/aa.webp'}
               alt="carousel image"
-              boxSize='100px'
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
               borderRadius='350px'
               mx='auto'
               />
             </SwiperSlide>
             <SwiperSlide>      
               <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
+              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/my1.png'}
               alt="carousel image"
-              boxSize='100px'
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
               borderRadius='350px'
               mx='auto'
               />
             </SwiperSlide>
             <SwiperSlide>      
               <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
+              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/atom.png'}
               alt="carousel image"
-              boxSize='100px'
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
+              borderRadius='350px'
+              mx='auto'
+              />
+            </SwiperSlide>
+            <SwiperSlide>      
+              <Image
+              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/descarga.png'}
+              alt="carousel image"
+              boxSize={['70px', '80px', '100px', '120px', '140px']}
               borderRadius='350px'
               mx='auto'
               />

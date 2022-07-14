@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Heading, List, ListItem, Box, IconButton } from '@chakra-ui/react'
+import { Flex, Heading, List, ListItem, Box, chakra } from '@chakra-ui/react'
 import { AiOutlineGithub, AiOutlineMail, AiFillLinkedin } from 'react-icons/ai'
 const Contact = () => {
   return (
@@ -20,16 +20,13 @@ const Contact = () => {
               >Seguimos el Contacto?</Heading>
               <List spacing={5} my={5}>
                 <ListItem opacity='0.8' fontSize={['16px', '18px', '20px' , '22px', '24px']} color='white'>
-                  <IconButton mr='10px' color='black' icon={<AiOutlineGithub />} size='lg' fontSize='25px' isRound='true' />
-                  Github
+                  <chakra.a href='https://github.com/SilvaLucas92'>Github</chakra.a>
                 </ListItem>
                 <ListItem opacity='0.8'  fontSize={['16px', '18px', '20px' , '22px', '24px']} color='white'>
-                  <IconButton mr='10px'  color='black' icon={<AiOutlineMail />} size='lg' fontSize='25px' isRound='true' />
-                  Gmail
+                  <chakra.a href='mailto:l.silva8692@gmail.com'>Email</chakra.a>
                 </ListItem>
                 <ListItem opacity='0.8'  fontSize={['16px', '18px', '20px' , '22px', '24px']} color='white'>
-                  <IconButton mr='10px'  color='black' icon={<AiFillLinkedin />} size='lg' fontSize='25px' isRound='true' />
-                  Linkedin
+                  <chakra.a href='https://www.linkedin.com/in/lucas-silva-b99518216/'>Linkedin</chakra.a>
                 </ListItem>
               </List>
             </Flex>

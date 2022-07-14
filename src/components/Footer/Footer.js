@@ -1,34 +1,25 @@
-import { Flex, Icon, Text } from '@chakra-ui/react'
+import { Flex, Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 
 const Footer = () => {
   return (
+    <Box 
+    w='100%'     
+    bg='#0a0a0a'>
+
     <Flex
-    justifyContent='center'
-    alignItems='center'
-    w='100%'
-    m='5px'
     as='footer'
+    w={{base: '90%', md: '80%', xl:'70%'}}
+    mx='auto'
     >
         <Text
-        alignItems='center'
-        color='gray.500'
+        color='white'
         >
-            Made with   
-            <Icon
-            textAlign='center'
-            m={2}
-            color='red'
-            >
-                <AiFillHeart 
-                size='20px'
-                />
-            </Icon>
-            by Lucas Silva
+            Lucas Silva 2022
         </Text>
-
     </Flex>
+    </Box>
     )
 }
 

@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, HStack,  IconButton, Stack, chakra } from '@chakra-ui/react';
+import { Text, Flex, Heading, HStack,  IconButton, Box, chakra } from '@chakra-ui/react';
 import { AiOutlineAlignRight,  AiOutlineClose} from 'react-icons/ai';
 import { TbEqual } from 'react-icons/tb';
 import { Link } from 'react-scroll';
@@ -37,7 +37,8 @@ const Header = () => {
   return (
     <ChakraBox
     w='100%'
-    top={show ? 0 : '-100px'}
+    // top={show ? 0 : '-100px'}
+    top='0'
     left='0'
     right='0'
     // bg='#ffc72c'
@@ -50,6 +51,7 @@ const Header = () => {
     type: "tween", 
     duration:0.8,
     ease:'easeInOut'}}
+    bg='white'
     >
       <Flex >
         <HStack
@@ -61,9 +63,7 @@ const Header = () => {
           <Heading>
               LS
           </Heading>
-          <Flex
-            // display={{md:'none'}}
-          >
+          <Flex>
             <IconButton
               icon={!showMenu? <TbEqual /> : <AiOutlineClose />} 
               onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}
@@ -75,90 +75,27 @@ const Header = () => {
               variant='outline'
               border='none'
             />
-          </Flex>
-
-          <Flex
-            as='nav'
-            display={{base:'none'}}
-            justify='center'
-            align='center'
-          >
-            <Button m={2} variant='link'>
-            <Link
-              to='about-me'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-            >
-            About Me</Link>
-            </Button>
-            <Button m={2} variant='link'>
-            <Link
-              to='services'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-            >
-            Nuestros servicios</Link>
-            </Button>
-            <Button m={2} variant='link'>
-            <Link
-              to='contact-me'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-            >
-            Contacto</Link>
-            </Button>
           </Flex>  
         </HStack>
       </Flex>
-      <Flex
-          as='nav'
-          display={showMenu? 'flex' : 'none'}
-          direction='column'
-          w='100%'
-          mx='auto'
-          align='center'
-          bg='#ffc72c'
-          >
-            <Button my={8} variant='link' size='lg'>
-            <Link
-              to='about-me'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-            >
-            About Me</Link>
-            </Button>
-            <Button my={8} variant='link' size='lg'>
-            <Link
-              to='services'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-            >
-            Nuestros servicios</Link>
-            </Button>
-            <Button my={8} variant='link' size='lg'>
-            <Link
-              to='contact-me'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-            >
-            Contacto</Link>
-            </Button>
-        </Flex> 
+            <Box
+                as='nav'
+                display={showMenu? 'flex' : 'none'}
+                direction='column'
+                border='solid 1px red'
+                w='100%'
+                bg='white'
+                >
+                <Flex 
+                w='50%'
+                zIndex='2'
+                h='80vh'
+                border='solid 1px red'
+                bg='red'
+                >
+                  <Text>hola</Text>
+                </Flex>
+              </Box> 
     </ChakraBox> 
     
   )
