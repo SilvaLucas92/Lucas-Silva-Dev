@@ -1,6 +1,5 @@
-import { Flex, Box, Text } from '@chakra-ui/react'
+import { Flex, Box, Heading } from '@chakra-ui/react'
 import React from 'react'
-import { AiFillHeart } from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -13,11 +12,13 @@ const Footer = () => {
     w={{base: '90%', md: '80%', xl:'70%'}}
     mx='auto'
     >
-        <Text
+        <Heading
+        fontSize={['25px']}
         color='white'
+        fontWeight='200'
         >
             Lucas Silva 2022
-        </Text>
+        </Heading>
     </Flex>
     </Box>
     )

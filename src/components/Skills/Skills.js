@@ -1,16 +1,10 @@
-import { Flex, Heading, Box, Text, Image, VStack } from '@chakra-ui/react'
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import { Flex, Heading, Box, Text, Image } from '@chakra-ui/react'
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
-
-// import required modules
 import { Autoplay } from "swiper";
-
-
+import data from './data'
 const Skills = () => {
     return(
       <Box
@@ -55,62 +49,22 @@ const Skills = () => {
             modules={[Autoplay]}
             mx='auto'
           >
-
-            <SwiperSlide
-            ml='30px'>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/Javascript_Logo.png'}
-              alt="carousel image"
-              mx='auto'
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/html2.png'}
-              alt="carousel image"
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/aa.webp'}
-              alt="carousel image"
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/my1.png'}
-              alt="carousel image"
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/atom.png'}
-              alt="carousel image"
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
-            <SwiperSlide>      
-              <Image
-              src={'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/descarga.png'}
-              alt="carousel image"
-              boxSize={['70px', '80px', '100px', '120px', '140px']}
-              borderRadius='350px'
-              mx='auto'
-              />
-            </SwiperSlide>
+            {data.map(oneData => {
+              return(
+                <SwiperSlide
+              ml='30px'
+              key={oneData.id}
+              >      
+                <Image
+                src={oneData.img}
+                alt={oneData.name}
+                mx='auto'
+                boxSize={['70px', '80px', '100px', '120px', '140px']}
+                borderRadius='350px'
+                />
+              </SwiperSlide>
+              )
+            })}
           </Swiper>
           </Flex>
         </Flex>

@@ -21,7 +21,7 @@ const Intro = ({ showBtn, setShowBtn }) => {
               setTelon(true)
               setTimeout(() => {
                 setShowBtn(true)
-              }, 2200)
+              }, 2500)
             }
         }, 500)
     })
@@ -38,10 +38,9 @@ const Intro = ({ showBtn, setShowBtn }) => {
     >
     <Flex
         justify='space-between'
-        w='100%'
-        h='100%'
+        p={5}
         >
-            <Heading fontSize='2.5em' fontWeight='400' color='white'>Lucas Silva Dev</Heading>
+            {/* <Heading fontSize='2.5em' fontWeight='400' color='white'>LS Dev</Heading> */}
             <Text alignSelf='flex-end' fontWeight='500' fontSize='50px' color='white' textAlign='end'>{value}%</Text>
     </Flex>
 
