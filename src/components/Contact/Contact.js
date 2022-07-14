@@ -6,6 +6,7 @@ const Contact = () => {
     <Box
     bg='#0a0a0a'
     as='section'
+    id='contact'
     >
       <Flex
       direction='column'
@@ -15,10 +16,10 @@ const Contact = () => {
             <Flex direction='column' justify='left' w='100%' my={5}>
               <Heading
               fontSize={['40px', '45px', '55px', '65px', '75px' ]}
-              color='white'
+              color='#eff0f3'
               fontWeight='200'
-              >Seguimos el Contacto?</Heading>
-              <List spacing={5} my={5}>
+              >Seguimos en Contacto?</Heading>
+              <List color='#fffffe' spacing={5} my={5}>
                 <ListItem opacity='0.8' fontSize={['16px', '18px', '20px' , '22px', '24px']} color='white'>
                   <chakra.a href='https://github.com/SilvaLucas92'>Github</chakra.a>
                 </ListItem>

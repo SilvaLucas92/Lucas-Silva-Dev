@@ -10,8 +10,8 @@ const ChakraBox = chakra(motion.header, {
 const Hero = () => {
   return (
     <Box 
-    // bg='#ffc72c'
     as='section'
+    bg='#fffffe'
     >
       <Flex
       h='100vh'
@@ -30,6 +30,7 @@ const Hero = () => {
             fontSize={{base:'14vw', sm:'12vw'}}
             lineHeight='1.1em'
             fontWeight='400'
+            color='#0d0d0d'
             >
               <chakra.span>L</chakra.span>
               <chakra.span>U</chakra.span>
@@ -55,6 +56,7 @@ const Hero = () => {
             transition={{
             delay: 3.7,
             duration:2}}
+            color='#2a2a2a'
             >
             FULLSTACK DEV
             </ChakraBox>

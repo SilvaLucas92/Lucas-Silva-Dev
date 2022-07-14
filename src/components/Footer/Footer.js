@@ -13,11 +13,13 @@ const Footer = () => {
     mx='auto'
     >
         <Heading
-        fontSize={['25px']}
-        color='white'
-        fontWeight='200'
+        fontSize={{base:'18px', md:'20px'}}
+        color='#eff0f3'
+        fontWeight='300'
+        opacity='0.9'
+        py={5}
         >
-            Lucas Silva 2022
+            Lucas Silva - 2022
         </Heading>
     </Flex>
     </Box>

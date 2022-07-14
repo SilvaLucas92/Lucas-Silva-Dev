@@ -40,7 +40,7 @@ const Intro = ({ showBtn, setShowBtn }) => {
         justify='space-between'
         p={5}
         >
-            {/* <Heading fontSize='2.5em' fontWeight='400' color='white'>LS Dev</Heading> */}
+            <Heading fontSize='2.5em' fontWeight='400' color='white'>LS Dev</Heading>
             <Text alignSelf='flex-end' fontWeight='500' fontSize='50px' color='white' textAlign='end'>{value}%</Text>
     </Flex>
 
