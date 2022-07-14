@@ -42,7 +42,7 @@ const AboutMe = () => {
           fontSize={['16px', '18px', '20px' , '22px', '24px']} 
           data-aos="fade-up"
           >Hola! Mi nombre es Lucas y vivo en Buenos Aires. Termine la certificacion de FullStack Web Developer en Digital House y actualmente me desempeño como React Developer en Ernst & Young. En mis ratos libres (ademas de tocar la guitarra) trabajo en mis propios proyectos para profundizar mis conocimientos y sumar nuevos. Ahora que ya me conociste un poco, te invito a que mires algunos de mis proyectos.</Text>
-          <Button mt={10} py={5} bg='#ffc72c'><chakra.a href={cvSpanish} target='_blank'>Descargar CV</chakra.a></Button>
+          <Button data-aos="zoom-in" mt={10} py={5} bg='#ffc72c'><chakra.a href={cvSpanish} target='_blank'>Descargar CV</chakra.a></Button>
         </Flex>
     </Box>
   )

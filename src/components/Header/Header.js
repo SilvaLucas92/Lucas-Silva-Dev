@@ -5,6 +5,12 @@ import { Link } from 'react-scroll';
 import React, { useState, useEffect } from 'react'
 import { motion, isValidMotionProp } from 'framer-motion';
 import './styles.css'
+
+const variants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: "-200%" },
+}
+
 const ChakraBox = chakra(motion.header, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
 });
@@ -72,11 +78,10 @@ const Header = () => {
               variant='outline'
               border='none'
             />
-            {/* <Heading fontWeight='300' onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}>Menu</Heading> */}
           </Flex>  
         </HStack>
       </Flex>
-       <Box
+       <ChakraBox
         h='100%'
         w='100%'
         position='fixed'
@@ -85,10 +90,14 @@ const Header = () => {
         right='0'
         bottom='0'
         overflow='auto'
-        transition='0.5'
         display={showMenu? 'block' : 'none'}
         bg='#fffffe'
         zIndex='300'
+        animate={showMenu ? "open" : "closed"}
+        variants={variants}
+        transition={{
+          type: "spring",
+          stiffness: 50 }}
        >
         <Flex
         w='100%'
@@ -96,9 +105,8 @@ const Header = () => {
         direction='column'
         justify='center'
         align='center'
-        mt={1}
         >
-              <Heading cursor='pointer' mt={10} mb={20} onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}>Close</Heading>
+              <Heading cursor='pointer' my={20} onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}>Close</Heading>
               <chakra.a 
               href="#about-me" 
               m={5} fontSize={['16px', '18px', '20px' , '22px', '24px']}  
@@ -156,7 +164,7 @@ const Header = () => {
               Contact Me</Link>
               </chakra.a>
         </Flex>
-       </Box>
+       </ChakraBox>
     </ChakraBox> 
     
   )

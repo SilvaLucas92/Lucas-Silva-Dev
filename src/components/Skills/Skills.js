@@ -50,7 +50,7 @@ const Skills = () => {
           justify='center'
           align='center'
           my='80px'
-          data-aos="fade-down"
+          data-aos="zoom-in"
           >
           <Swiper
             slidesPerView={3}

@@ -59,7 +59,7 @@ const Projects = () => {
                                     opacity='0.9'
                                     mt={3}
                                     color='#2a2a2a'
-                                    data-aos="fade-down"
+                                    data-aos="fade-up"
                                     overflow='hidden'
                                     >{oneData.name}</Heading>
                                     <HStack 
