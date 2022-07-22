@@ -11,7 +11,7 @@ export default [
     },
     {
         id:3,
-        img:'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/aa.webp',
+        img:'https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png',
         name:'CSS'
     },
     {
@@ -29,6 +29,16 @@ export default [
         img:'https://raw.githubusercontent.com/SilvaLucas92/portfolio-LucasSilva/master/public/images/descarga.png',
         name:'NodeJS'
     },
+    {
+        id:7,
+        img:'https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/preview_image/ReduxLogo.jpg',
+        name:'redux'
+    },
+    {
+        id:8,
+        img:'https://pbs.twimg.com/profile_images/1244925541448286208/rzylUjaf_400x400.jpg',
+        name:'chakraui'
+    }
 
 ]
 

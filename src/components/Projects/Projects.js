@@ -28,11 +28,19 @@ const Projects = () => {
                 my={5}
                 color='#0d0d0d'
                 data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-easing="linear"
                 >Projects</Heading>
             </Flex>
             {data.map((oneData, index) => {
                 return(                    
-                    <Box key={index} overflow='hidden'>
+                    <Box 
+                    key={index}
+                    overflowY='hidden'
+                    data-aos= "fade-up"
+                    data-aos-duration="1000"
+                    data-aos-easing="linear"
+                    >
                         <Flex
                         className='section'
                         justify={index % 2 === 0 ? 'right' : 'flex-start'}
@@ -46,26 +54,25 @@ const Projects = () => {
                                 <Box
                                 w='100%'
                                 >
-                                    <Image 
-                                    data-aos="fade-up"
-                                    overflow='hidden'
-                                    src={oneData.img} />
+                                    <chakra.a href={oneData.site}>
+                                        <Image 
+                                        src={oneData.img}
+                                        />
+                                    </chakra.a>
                                 </Box>
                                 <Box className='text'>
-                                    <Heading 
-                                    as='h4' 
-                                    fontSize={{base:'20px', sm:'25px', md:'30px', xl:'35px'}} 
-                                    fontWeight='400' 
-                                    opacity='0.9'
-                                    mt={3}
-                                    color='#2a2a2a'
-                                    data-aos="fade-up"
-                                    overflow='hidden'
-                                    >{oneData.name}</Heading>
+                                    <chakra.a href={oneData.site}> 
+                                        <Heading 
+                                        as='h4' 
+                                        fontSize={{base:'20px', sm:'25px', md:'30px', xl:'35px'}} 
+                                        fontWeight='400' 
+                                        opacity='0.9'
+                                        mt={3}
+                                        color='#2a2a2a'
+                                        >{oneData.name}</Heading>
+                                    </chakra.a>
                                     <HStack 
                                     mt={1}
-                                    data-aos="fade-up"
-                                    overflow='hidden'
                                     >                
                                         <chakra.a href={oneData.github} color='#2a2a2a' opacity='0.8'>Github *</chakra.a>
                                         <chakra.a href={oneData.site} color='#2a2a2a' opacity='0.8'>Site</chakra.a>

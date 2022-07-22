@@ -16,6 +16,7 @@ const ChakraBox = chakra(motion.header, {
 });
 
 const Header = () => {
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
@@ -40,6 +41,24 @@ const Header = () => {
     }
   }, [lastScrollY]);
 
+  const links = [
+    {
+      name:'About me',
+      navTo:'about-me'
+    },
+    {
+      name:'Skills',
+      navTo:'skills'
+    },
+    {
+      name:'Projects',
+      navTo:'projects'
+    },
+    {
+      name:'Contact Me',
+      navTo:'contact'
+    }
+  ]
   return (
     <ChakraBox
     w='100%'
@@ -52,28 +71,31 @@ const Header = () => {
     initial={{y:-250}}
     animate={{y:0}}
     transition={{
-    delay: 3.7,
+    delay: 2.5,
     duration:2}}
     >
       <Flex >
         <HStack
-          w={{base: '90%', md: '80%'}}
+          w='90%'
           mx='auto'
           justify='space-between'
           align='center'
-          p={5}>
-          display
-          <Heading>
+          py={5}
+          >
+          <Heading  
+          fontSize={['30px', '35px', '42px', '45px']}
+          color='#0d0d0d'
+          >
               LS
           </Heading>
           <Flex>
             <IconButton
               icon={!showMenu? <TbEqual /> : <AiOutlineClose />} 
               onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}
-              fontSize={28}
+              fontSize={['20px', '28px', '30px']}
               fontWeight='100'
               isRound='true'
-              backgroundColor='#0a0a0a'
+              backgroundColor='#0d0d0d'
               color='#ffffff' 
               variant='outline'
               border='none'
@@ -82,22 +104,21 @@ const Header = () => {
         </HStack>
       </Flex>
        <ChakraBox
-        h='100%'
+        h='100vh'
         w='100%'
         position='fixed'
         top='0'
         left='0'
         right='0'
         bottom='0'
-        overflow='auto'
         display={showMenu? 'block' : 'none'}
-        bg='#fffffe'
+        bg='#f8f8f8'
         zIndex='300'
         animate={showMenu ? "open" : "closed"}
         variants={variants}
         transition={{
-          type: "spring",
-          stiffness: 50 }}
+          type: "tween",
+          duration:0.2 }}
        >
         <Flex
         w='100%'
@@ -106,63 +127,35 @@ const Header = () => {
         justify='center'
         align='center'
         >
-              <Heading cursor='pointer' my={20} onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}>Close</Heading>
-              <chakra.a 
-              href="#about-me" 
-              m={5} fontSize={['16px', '18px', '20px' , '22px', '24px']}  
-              fontWeight='600'>
-              <Link
-              to='about-me'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-              >
-              About Me</Link>
-              </chakra.a>
-              <chakra.a 
-              href="#skills" 
-              m={5} fontSize={['16px', '18px', '20px' , '22px', '24px']}  
-              fontWeight='600'>
-              <Link
-              to='skills'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-              >
-              Skills</Link>
-              </chakra.a>
-              <chakra.a 
-              href="#projects" 
-              m={5} fontSize={['16px', '18px', '20px' , '22px', '24px']}  
-              fontWeight='600'>
-              <Link
-              to='projects'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-              >
-              Projects</Link>
-              </chakra.a>
-              <chakra.a 
-              href="#contact" 
-              m={5} fontSize={['16px', '18px', '20px' , '22px', '24px']}  
-              fontWeight='600'>
-              <Link
-              to='contact'
-              spy={true} 
-              smooth={true} 
-              offset={100} 
-              duration={800}
-              onClick={() => {return setShowMenu(false)}}
-              >
-              Contact Me</Link>
-              </chakra.a>
+              <Heading 
+              cursor='pointer' 
+              my={20} 
+              onClick={() => {return !showMenu? setShowMenu(true) : setShowMenu(false)}}
+              className="hover-underline-animation"
+              >Close</Heading>
+              {links.map((oneLink, i) => {
+                return(
+                  <chakra.a 
+                  key={i}
+                  cursor='pointer'
+                  m={5} 
+                  fontSize={['18px', '20px', '22px' , '24px', '26px']}  
+                  fontWeight='600'
+                  className="hover-underline-animation"
+                  opacity='0.8'
+                  >
+                    <Link
+                    to={oneLink.navTo}
+                    spy={true} 
+                    smooth={true} 
+                    offset={100} 
+                    duration={800}
+                    onClick={() => {return setShowMenu(false)}}
+                    >
+                    {oneLink.name} </Link>
+                  </chakra.a>
+                )
+              })}
         </Flex>
        </ChakraBox>
     </ChakraBox> 

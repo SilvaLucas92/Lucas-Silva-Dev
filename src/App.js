@@ -8,11 +8,11 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import { Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react'
 function App() {
   const [ showBtn, setShowBtn] = useState(false)
   return(
-    <div>
+    <Box as='main'>
     
       {!showBtn && <Intro showBtn={showBtn}  setShowBtn={setShowBtn}/>}
       { showBtn && 
@@ -26,7 +26,7 @@ function App() {
         <Footer />
       </>
         }
-    </div>
+    </Box>
   )
 }
 

@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <Box 
     as='section'
-    bg='#fffffe'
+    bg='#f8f8f8'
     >
       <Flex
       h='100vh'
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{y:250}}
             animate={{y:0}}
             transition={{
-            delay: 3.7,
+            delay: 2.5,
             duration:2}}
             color='#2a2a2a'
             >

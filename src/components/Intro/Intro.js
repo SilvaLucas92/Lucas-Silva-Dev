@@ -11,18 +11,13 @@ const variants = {
     closed: { y: -1200 },
   }
 const Intro = ({ showBtn, setShowBtn }) => {
-    const [ value, setValue ] = useState (0); 
     const [ telon, setTelon ] = useState(false)
     useEffect(() => {
         setTimeout(() => {
-            if (value < 100 ) {
-                setValue(value + 10)
-            } else {
-              setTelon(true)
-              setTimeout(() => {
-                setShowBtn(true)
-              }, 2500)
-            }
+                setTelon(true)
+                setTimeout(() => {
+                  setShowBtn(true)
+                }, 1200)
         }, 500)
     })
 
@@ -34,18 +29,8 @@ const Intro = ({ showBtn, setShowBtn }) => {
     animate={telon ? "closed" : "open"}
     initial={{y: 0}}
     variants={variants}
-    transition={{delay:0.5, duration:3}}
-    >
-    <Flex
-        justify='space-between'
-        p={5}
-        >
-            <Heading fontSize='2.5em' fontWeight='400' color='white'>LS Dev</Heading>
-            <Text alignSelf='flex-end' fontWeight='500' fontSize='50px' color='white' textAlign='end'>{value}%</Text>
-    </Flex>
-
-    </ChakraBox>
- 
+    transition={{delay:0.5, duration:1}}
+    />
   )
 }
 
