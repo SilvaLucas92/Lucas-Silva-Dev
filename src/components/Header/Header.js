@@ -1,5 +1,5 @@
-import { Text, Flex, Heading, HStack,  IconButton, Box, chakra } from '@chakra-ui/react';
-import { AiOutlineAlignRight,  AiOutlineClose} from 'react-icons/ai';
+import {  Flex, Heading, HStack,  IconButton, chakra } from '@chakra-ui/react';
+import { AiOutlineClose} from 'react-icons/ai';
 import { TbEqual } from 'react-icons/tb';
 import { Link } from 'react-scroll';
 import React, { useState, useEffect } from 'react'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Heading, List, ListItem, Box, chakra } from '@chakra-ui/react'
-import { AiOutlineGithub, AiOutlineMail, AiFillLinkedin } from 'react-icons/ai'
+
 const Contact = () => {
   return (
     <Box

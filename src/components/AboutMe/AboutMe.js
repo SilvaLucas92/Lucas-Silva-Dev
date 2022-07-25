@@ -1,8 +1,9 @@
-import { Flex, Box, Text, Heading, chakra, Center, Button } from '@chakra-ui/react'
+import { Flex, Box, Text, Heading, chakra, Button } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import cvSpanish from './LucasSilva-CV.pdf';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import {AiOutlineDownload} from 'react-icons/ai'
 const AboutMe = () => {
   useEffect(() => {
     Aos.init({ duration:2000 })
@@ -11,11 +12,11 @@ const AboutMe = () => {
   const aboutMeText = [
     {
       id:1,
-      text:'Hola Mundo! Mi nombre es Lucas Silva y soy un apasionado de la tecnologia. Actualmente vivo en Buenos Aires, Argentina y trabajo como Desarrollador Full Stack para EY GDS Argentina.'
+      text:'Hola Mundo! Mi nombre es Lucas Silva y soy un apasionado de la tecnología. Actualmente vivo en Buenos Aires, Argentina y trabajo como Desarrollador Full Stack para EY GDS Argentina.'
     },
     {
       id:2,
-      text:'Mi interes por el desarrollo web nace hace un tiempo cuando empece de manera autodidacta a realizar cursos y challenges de HTML y CSS. Luego ansioso por conocer mas de este mundo, decidi  cursar en Digital House la carrera de Desarrollador Full Stack la cual finalice. Hoy en dia sigo capacitandome  y esforzandome en incorporar nuevas tecnologias.'
+      text:'Mi interes por el desarrollo web nace hace un tiempo cuando empece de manera autodidacta a realizar cursos y challenges de HTML y CSS. Luego ansioso por conocer mas de este mundo, decidí  cursar en Digital House la carrera de Desarrollador Full Stack la cual finalicé. Hoy en día sigo capacitándome  y esforzándome en incorporar nuevas tecnologías.'
     },
     {
       id:3,
@@ -77,9 +78,11 @@ const AboutMe = () => {
           variant='outline'
           mt={10} 
           py={5} 
-          w='20%'
+          w='25%'
+          size={{base:'xs', sm:'sm', md:'md', xl:'lg'}}
           colorScheme='whiteAlpha'
-          ><chakra.a href={cvSpanish} target='_blank'>Descargar CV</chakra.a></Button>
+          rightIcon={<AiOutlineDownload />}
+          ><chakra.a href={cvSpanish} target='_blank'>CV</chakra.a></Button>
         </Flex>
     </Box>
   )
